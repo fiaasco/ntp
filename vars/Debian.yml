@@ -1,0 +1,4 @@
+---
+# description: ntp service
+# type: string
+ntp_service: ntp

@@ -1,0 +1,6 @@
+---
+
+- name: ensure ntp client is installed
+  apt:
+    name: ntp
+    state: present

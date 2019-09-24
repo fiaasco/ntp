@@ -1,0 +1,13 @@
+---
+
+- name: Include OS family specific vars
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Install ntp
+  include_tasks: "install-{{ ansible_os_family }}.yml"
+
+- name: configure the ntp client
+  template:
+    src: "ntp.conf-{{ ansible_os_family }}.j2"
+    dest: /etc/ntp.conf
+  notify: restart ntp

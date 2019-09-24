@@ -1,0 +1,6 @@
+---
+
+- name: ensure ntp client is installed
+  yum:
+    name: ntp
+    state: present
